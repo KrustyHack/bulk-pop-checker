@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Bulk email checker
+  p Bulk check a list of email
+  h2 Example
+  p Each line will be: "POPSERVER:PORT:USERNAME:PASSWORD"
+  p(style="color: red;") No data are stored and there is no application cache.
+  p Here is a line sample:
+  textarea(name="example", style="width: 100%; height: 100px;", disabled)
+    | pop.mail.ru:995:cscwRosaRolls@bk.ru:Yyjso855
+
+  textarea(name="emails", style="width: 50%; height: 400px;")
+  textarea(name="results", style="width: 50%; height: 400px;", disabled)
+  button#check(style="width: 100%; font-size: 30px;") Check
+
+  #loading.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h4.modal-title Request on the way
+            .modal-body
+                p Please wait. Your request is being processed...
+                p It can take a long time.
+            .modal-footer
