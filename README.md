@@ -1,4 +1,4 @@
-bulk-pop-checket
+bulk-pop-checker
 ================
 
 Bulk check emails
